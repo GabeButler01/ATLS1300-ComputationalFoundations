@@ -1,0 +1,46 @@
+Tasks:
+Define turtles - cloud, flower1, flower2, flower3, rain1, rain2... (probably 1-10 rain turtles)
+Make the rain turtles come out of the cloud
+When rain hits the flower turtles, have flowers g(o from wilting to happy
+Cloud size decreases? (limited amount of time to water flowers)
+
+import turtle, time
+
+
+create cloud turtle (shape of cloud)
+(go to top of screen)
+
+create list of flower turtles (make shape an image of wilting flower and track boolean of being watered)
+(go to bottom of screen)
+import other flower images that will later replace the shape of the flower turtles
+
+create list of rain turtles (in shape of raindrops)
+(go behind the cloud at random locations)
+
+
+time = 500 (time until cloud disappears)
+raindrops = 10 (number of raindrop turtles)
+flowers = 3 (number of flowers)
+create list that keeps track of how many raindrops hit each flower (dropCount = [0,0,0])
+
+def water(falling = True):
+	if falling:
+		for drops in range(raindrops):
+			rainTurtles[drops] = forward(100) # fall
+			time.sleep(0.03) # raindrops don't all fall at the same time
+
+for i in range(time):
+	panel.onclick(goto)
+	water()
+	if rainTurtles[drops].xcor == flowerTurtles[j].xcor && rainTurtles[drops].ycor == flowerTurtles[j].ycor:
+		dropCount[j] += 1
+		if dropCount[j] == 5:
+			flowerTurtles[j] = happy flower image & watered = True
+	if rainTurtles[drops].ycor == 0:
+		rainTurtles[drops].goto(cloud)
+	if flowerTurtles == True (all of them):
+		water(False)
+		turtle.done()
+turtle.done()
+		
+			
