@@ -1,0 +1,52 @@
+import turtle, random, time
+
+create list of shapes
+create list of colors
+create list of turtle attributes (memory) - have random attributes
+
+create class - Options(turtle.Turtle)
+
+	super().__init__()
+
+	create random turtles based on lists created previously
+
+	define method - picked:
+		this may just change the turtle color to the background color, move it off screen, etc. (need to create code to see what works best)
+
+create class - FinalChoices(Options)
+	# basically just create a copy of an Options object
+
+	super().__init__()
+
+	if correct = True:
+		self.onclick(correct)
+
+	if correct = False:
+		self.onclick(wrong)
+
+	define method - correct:
+		display that user won
+		end program
+
+	define method - wrong:
+		display that user lost
+		end program
+
+def run():
+	instantiate 20 Options objects
+
+	show the objects for some time (time.sleep)
+
+	run picked on a couple random Options objects
+
+	show the new screen with some missing objects
+
+	create a new panel
+
+	FinalChoices(True)
+	FinalChoices(False)
+	FinalChoices(False)
+	FinalChoices(False)
+
+if __name__ == '__main__':
+    run()

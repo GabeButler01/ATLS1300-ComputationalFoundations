@@ -1,0 +1,23 @@
+import turtle, random, time
+
+create list of shapes
+create list of colors
+
+create class - Options
+	create random turtles based on lists created previously
+
+	define method - picked:
+		this may just change the turtle color to the background color, move it off screen, etc. (need to create code to see what works best)
+
+instantiate 15-20 Options objects
+
+show the objects for some time (time.sleep)
+
+run picked on a couple random Options objects
+
+show the new screen with some missing objects
+
+create a new panel with the missing objects and one fake
+
+have user guess which one is fake
+	win/lose condition depending on the choice
