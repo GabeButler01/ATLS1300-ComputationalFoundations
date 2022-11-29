@@ -1,0 +1,47 @@
+import turtle & math libraries
+set the colormode to 255
+
+create the panel (size = screen size, color = black)
+change the turtle color (80, 80, 200)
+set turtle speed to fastest (10)
+pick pen up
+
+# Circle spiro
+
+define variable int - inc (the angle between circles = 10)
+define variable int - numIt (number of iterations needed to complete the spiro = int(360/inc) = 36)
+define variable int - innerCirc (the radius of the inner circle = 2)
+define variable int - radius (the radius of the circles within the spiro = 50)
+
+move turtle to the center of the spiro (150, 150)
+
+for iteration in range(numIt):
+	put pen down
+	draw a circle with radius, (variable) radius (50)
+	move the turtle forward to the next circle starting point (move by int innerCirc (2))
+	turn turtle to the right by angle, (variable) degrees (10) (rotate to where the next circle should start to cause the circles to create a spirograph)
+
+pick pen up
+
+# Polygon spiro
+
+define variable int - size (how big the polygon is = 50)
+define variable int - sides (how many sides the polygon will have = 4)
+define variable int/float - angle (the internal angles of the shape = 360/sides = 90)
+
+define variable int - inc (the angle between polygons = 10)
+define variable int - numIt (number of iterations needed to complete the spiro = int(360/inc) = 36)
+define variable int - innerCirc (the radius of the inner circle = 20)
+
+move turtle to the center of the spiro (-100, -50)
+
+for iteration2 in range(numIt):
+	put the pen down
+	for iteration1 in range(sides):
+		move the turtle forward by size (draw side of polygon)
+		turn turtle to the right by angle (turn into direction of where next side will go)
+	pick the pen up
+	move the turtle forward by innerCirc (move to where the next polygon will start)
+	turn turtle to the right by inc (rotate to where the next polygon should start to cause the polygons to move into a circle (spirograph))
+
+turtle.done()

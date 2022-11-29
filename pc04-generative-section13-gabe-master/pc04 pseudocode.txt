@@ -1,0 +1,58 @@
+import turtle, random
+set colormode to 255
+
+create 600x400 panel
+
+# note: almost all these colors/numbers will definitely change after experimenting
+create variable sky - (135, 206, randint(220,255))
+set panel color to (sky)
+
+# draw clouds
+create turtle - cloud
+change turtle shape into cloud shape (may need parametric equations or just draw a lot of semi circles)
+pick pen up
+
+create variable cloudNumber - random.randint(0,3)
+for clouds in cloudNumber:
+	pick pen up
+	cloud.goto(random.randint(-300,-50),random.randint(0,200))
+	put pen down
+	stamp turtle # possibly look into making random cloud sizes
+
+# draw random rainbow
+create turtle - rainbow
+create variable list - ROYGBIV
+create variable rings = 300
+create  variable y = -130
+
+# create a list of random rainbow colors (most common R, G, and B values that put the color into the correct family)
+ROYGBIV[0] = (randomint(200,255), randomint(0,100), randomint(0,100)) # red
+ROYGBIV[1] = (255, randomint(70,200), randomint(0,30)) # orange
+...
+ROYGBIV[6] = (randomint(100,255), randomint(0,230), randomint(200,255) # violet
+
+# draw the rainbow. (in reality, these will be giant circles that will go off screen)
+for colors in ROYGBIV:
+	change rainbow color to ROYGBIV[colors]
+	pick pen up
+	make turtle go to (300, y)
+	put pen down
+	begin fill
+	draw circle with radius rings
+	end fill
+	rings = rings - 20
+	y = y + 20
+
+# turn the bottom right corner back into the sky color so it looks like a rainbow
+turtle go to (300, y)
+change color to sky
+pen down
+begin fill
+draw circle with radius 20?
+end fill
+
+turtle.done()
+
+	
+
+
